@@ -10,10 +10,10 @@
 
 int main(int argc, char** argv)
 {
-  double x[N] = {1., 2., 3.};
-  double y[N] = {2., 3., 4.};
+  double x[3] = {1., 2., 3.};
+  double y[3] = {2., 3., 4.};
 
-  assert(vector_dot(x, y, N) == 20);
+  assert(vector_dot(x, y, 3) == 20);
 
   return 0;
 }

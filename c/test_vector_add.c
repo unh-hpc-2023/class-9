@@ -11,11 +11,11 @@
 int main(int argc, char** argv)
 {
   {
-    double x[N] = {1., 2., 3.};
-    double y[N] = {2., 3., 4.};
-    double z[N];
+    double x[3] = {1., 2., 3.};
+    double y[3] = {2., 3., 4.};
+    double z[3];
 
-    vector_add(x, y, z, N);
+    vector_add(x, y, z, 3);
     assert(z[0] == 3. && z[1] == 5. && z[2] == 7.);
   }
 
