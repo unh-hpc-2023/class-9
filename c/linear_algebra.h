@@ -5,9 +5,9 @@
 // vector length (fixed)
 #define N (3)
 
-double vector_dot(const double* x, const double* y);
-void vector_add(const double* x, const double* y, double* z);
+double vector_dot(const double* x, const double* y, int n);
+void vector_add(const double* x, const double* y, double* z, int n);
 
-void matrix_vector_mul(const double A[N][N], const double* x, double* y);
+void matrix_vector_mul(int n, const double A[n][n], const double* x, double* y);
 
 #endif
