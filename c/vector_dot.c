@@ -15,7 +15,7 @@ double vector_dot(const struct vector* x, const struct vector* y)
   double sum = 0.f;
   assert(x->n == y->n);
   for (int i = 0; i < x->n; i++) {
-    sum += x->data[i] * y->data[i];
+    sum += VEC(x, i) * VEC(y, i);
   }
   return sum;
 }
