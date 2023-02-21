@@ -1,6 +1,8 @@
 
 #include "linear_algebra.h"
 
+#include <assert.h>
+
 // ----------------------------------------------------------------------
 // vector_dot
 //
@@ -8,11 +10,12 @@
 // x: first vector
 // y: second vector
 
-double vector_dot(const double* x, const double* y, int n)
+double vector_dot(const struct vector* x, const struct vector* y)
 {
   double sum = 0.f;
-  for (int i = 0; i < n; i++) {
-    sum += x[i] * y[i];
+  assert(x->n == y->n);
+  for (int i = 0; i < x->n; i++) {
+    sum += x->data[i] * y->data[i];
   }
   return sum;
 }
