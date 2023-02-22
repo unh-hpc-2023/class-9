@@ -22,6 +22,7 @@ double vector_dot(const struct vector* x, const struct vector* y);
 void vector_add(const struct vector* x, const struct vector* y,
                 struct vector* z);
 
-void matrix_vector_mul(int n, const double A[n][n], const double* x, double* y);
+void matrix_vector_mul(int n, const double A[n][n], const struct vector* x,
+                       struct vector* y);
 
 #endif
