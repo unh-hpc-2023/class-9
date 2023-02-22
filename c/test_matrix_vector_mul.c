@@ -19,13 +19,13 @@ int main(int argc, char** argv)
   for (int i = 0; i < x.n; i++) {
     VEC(&x, i) = 1 + i;
   }
-  // clang-format off
-  double A[3][3] = {{1., 1., 0.},
-		            {0., 2., 0.},
-		            {0., 0., 3.}};
-  // clang-format on
+  double A[N * N];
+  for (int i = 0; i < N; i++) {
+    MAT(A, N, i, i) = i + 1; // set diagonal
+  }
+  MAT(A, N, 0, 1) = 1.; // add one non-zero off-diagonal element
 
-  matrix_vector_mul(&A[0][0], &x, &y);
+  matrix_vector_mul(A, &x, &y);
   assert(VEC(&y, 0) == 3. && VEC(&y, 1) == 4. && VEC(&y, 2) == 9.);
 
   vector_destruct(&x);

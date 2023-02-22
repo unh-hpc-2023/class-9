@@ -12,7 +12,7 @@ void matrix_vector_mul(const double* A, const struct vector* x,
   for (int j = 0; j < n; j++) {
     VEC(y, j) = 0.;
     for (int i = 0; i < n; i++) {
-      VEC(y, j) += A[j * n + i] * VEC(x, i);
+      VEC(y, j) += MAT(A, n, j, i) * VEC(x, i);
     }
   }
 }
