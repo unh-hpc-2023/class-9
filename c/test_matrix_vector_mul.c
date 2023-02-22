@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 		            {0., 0., 3.}};
   // clang-format on
 
-  matrix_vector_mul(3, A, &x, &y);
+  matrix_vector_mul(&A[0][0], &x, &y);
   assert(VEC(&y, 0) == 3. && VEC(&y, 1) == 4. && VEC(&y, 2) == 9.);
 
   vector_destruct(&x);
