@@ -11,11 +11,7 @@
 
 void test_vector_add(int N)
 {
-  vector x, y, z, z_ref;
-  x.construct(N);
-  y.construct(N);
-  z.construct(N);
-  z_ref.construct(N);
+  vector x(N), y(N), z(N), z_ref(N);
 
   for (int i = 0; i < N; i++) {
     VEC(x, i) = 1 + i;

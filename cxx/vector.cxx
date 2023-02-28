@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-void vector::construct(int n_)
+vector::vector(int n_)
 {
   data = new double[n_];
   n = n_;

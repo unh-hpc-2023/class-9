@@ -11,7 +11,7 @@
 
 struct vector
 {
-  void construct(int n);
+  vector(int n);
   ~vector();
 
   double* data;

@@ -12,10 +12,7 @@
 int main(int argc, char** argv)
 {
   const int N = 3;
-  vector x, y, y_ref;
-  x.construct(N);
-  y.construct(N);
-  y_ref.construct(N);
+  vector x(N), y(N), y_ref(N);
 
   for (int i = 0; i < x.n; i++) {
     VEC(x, i) = 1 + i;
