@@ -28,6 +28,9 @@ void vector_add(const vector& x, const vector& y, vector& z);
 
 struct matrix
 {
+  matrix(int n_rows, int n_cols);
+  ~matrix();
+
   double* data;
   int n_rows;
   int n_cols;
