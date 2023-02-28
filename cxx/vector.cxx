@@ -6,7 +6,7 @@
 
 void vector_construct(struct vector* v, int n)
 {
-  v->data = calloc(n, sizeof(*v->data));
+  v->data = (double*)calloc(n, sizeof(*v->data));
   v->n = n;
 }
 
