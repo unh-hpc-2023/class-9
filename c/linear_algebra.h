@@ -29,7 +29,7 @@ struct matrix
   int n_cols;
 };
 
-#define MAT(A, n, i, j) (A)->data[(i) * (n) + (j)]
+#define MAT(A, i, j) (A)->data[(i) * (A)->n_cols + (j)]
 
 void matrix_construct(struct matrix* A, int n_rows, int n_cols);
 void matrix_destruct(struct matrix* A);

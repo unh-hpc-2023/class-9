@@ -11,7 +11,7 @@ void matrix_vector_mul(const struct matrix* A, const struct vector* x,
   for (int j = 0; j < y->n; j++) {
     VEC(y, j) = 0.;
     for (int i = 0; i < x->n; i++) {
-      VEC(y, j) += MAT(A, n, j, i) * VEC(x, i);
+      VEC(y, j) += MAT(A, j, i) * VEC(x, i);
     }
   }
 }

@@ -23,9 +23,9 @@ int main(int argc, char** argv)
   matrix_construct(&A, N, N);
 
   for (int i = 0; i < N; i++) {
-    MAT(&A, N, i, i) = i + 1; // set diagonal
+    MAT(&A, i, i) = i + 1; // set diagonal
   }
-  MAT(&A, N, 0, 1) = 1.; // add one non-zero off-diagonal element
+  MAT(&A, 0, 1) = 1.; // add one non-zero off-diagonal element
 
   matrix_vector_mul(&A, &x, &y);
   assert(VEC(&y, 0) == 3. && VEC(&y, 1) == 4. && VEC(&y, 2) == 9.);
