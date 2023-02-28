@@ -1,0 +1,15 @@
+
+add_library(linalgcxx vector_dot.cxx vector_add.cxx matrix_vector_mul.cxx
+    vector.cxx matrix.cxx)
+
+add_executable(test_vector_dot_cxx test_vector_dot.cxx)
+target_link_libraries(test_vector_dot_cxx PRIVATE linalgcxx)
+add_test(TestVectorDotCxx test_vector_dot_cxx)
+
+add_executable(test_vector_add_cxx test_vector_add.cxx)
+target_link_libraries(test_vector_add_cxx PRIVATE linalgcxx)
+add_test(TestVectorAddCxx test_vector_add_cxx)
+
+add_executable(test_matrix_vector_mul_cxx test_matrix_vector_mul.cxx)
+target_link_libraries(test_matrix_vector_mul_cxx PRIVATE linalgcxx)
+add_test(TestMatrixVectorMulCxx test_matrix_vector_mul_cxx)
