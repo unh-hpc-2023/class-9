@@ -25,6 +25,8 @@ void vector_add(const struct vector* x, const struct vector* y,
 struct matrix
 {
   double* data;
+  int n_rows;
+  int n_cols;
 };
 
 #define MAT(A, n, i, j) (A)->data[(i) * (n) + (j)]
