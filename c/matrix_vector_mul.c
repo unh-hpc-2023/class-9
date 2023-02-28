@@ -3,7 +3,7 @@
 
 #include <assert.h>
 
-void matrix_vector_mul(const double* A, const struct vector* x,
+void matrix_vector_mul(const struct matrix* A, const struct vector* x,
                        struct vector* y)
 {
   int n = x->n;

@@ -22,9 +22,14 @@ double vector_dot(const struct vector* x, const struct vector* y);
 void vector_add(const struct vector* x, const struct vector* y,
                 struct vector* z);
 
-#define MAT(A, n, i, j) A[(i) * (n) + (j)]
+struct matrix
+{
+  double* data;
+};
 
-void matrix_vector_mul(const double* A, const struct vector* x,
+#define MAT(A, n, i, j) (A)->data[(i) * (n) + (j)]
+
+void matrix_vector_mul(const struct matrix* A, const struct vector* x,
                        struct vector* y);
 
 #endif

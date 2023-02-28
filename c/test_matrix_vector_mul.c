@@ -19,17 +19,19 @@ int main(int argc, char** argv)
   for (int i = 0; i < x.n; i++) {
     VEC(&x, i) = 1 + i;
   }
-  double A[N * N];
+  struct matrix A;
+  A.data = calloc(N * N, sizeof(*A.data));
   for (int i = 0; i < N; i++) {
-    MAT(A, N, i, i) = i + 1; // set diagonal
+    MAT(&A, N, i, i) = i + 1; // set diagonal
   }
-  MAT(A, N, 0, 1) = 1.; // add one non-zero off-diagonal element
+  MAT(&A, N, 0, 1) = 1.; // add one non-zero off-diagonal element
 
-  matrix_vector_mul(A, &x, &y);
+  matrix_vector_mul(&A, &x, &y);
   assert(VEC(&y, 0) == 3. && VEC(&y, 1) == 4. && VEC(&y, 2) == 9.);
 
   vector_destruct(&x);
   vector_destruct(&y);
+  free(A.data);
 
   return 0;
 }
