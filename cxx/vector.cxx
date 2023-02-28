@@ -3,11 +3,7 @@
 
 #include <stdio.h>
 
-vector::vector(int n_)
-{
-  data = new double[n_];
-  n = n_;
-}
+vector::vector(int n_) : data(new double[n_]), n(n_) {}
 
 vector::~vector()
 {
