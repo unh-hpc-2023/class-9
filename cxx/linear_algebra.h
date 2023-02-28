@@ -40,8 +40,6 @@ struct matrix
 
 #define MAT(A, i, j) (A).data[(i) * (A).n_cols + (j)]
 
-void matrix_construct(matrix& A, int n_rows, int n_cols);
-void matrix_destruct(matrix& A);
 void matrix_print(const matrix& A);
 
 void matrix_vector_mul(const matrix& A, const vector& x, vector& y);
