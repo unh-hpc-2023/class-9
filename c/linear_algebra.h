@@ -34,6 +34,7 @@ struct matrix
 
 void matrix_construct(struct matrix* A, int n_rows, int n_cols);
 void matrix_destruct(struct matrix* A);
+void matrix_print(const struct matrix* A);
 
 void matrix_vector_mul(const struct matrix* A, const struct vector* x,
                        struct vector* y);
