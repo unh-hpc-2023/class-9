@@ -13,8 +13,8 @@ int main(int argc, char** argv)
 {
   const int N = 3;
   vector x, y;
-  vector_construct(x, N);
-  vector_construct(y, N);
+  x.construct(N);
+  y.construct(N);
 
   for (int i = 0; i < x.n; i++) {
     VEC(x, i) = 1 + i;
@@ -26,8 +26,8 @@ int main(int argc, char** argv)
 
   assert(vector_dot(x, y) == 20.);
 
-  vector_destruct(x);
-  vector_destruct(y);
+  x.destruct();
+  y.destruct();
 
   return 0;
 }

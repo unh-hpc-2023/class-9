@@ -3,18 +3,18 @@
 
 #include <stdio.h>
 
-void vector_construct(vector& v, int n)
+void vector::construct(int n_)
 {
-  v.data = new double[n];
-  v.n = n;
+  data = new double[n_];
+  n = n_;
 }
 
-void vector_destruct(vector& v)
+void vector::destruct()
 {
-  delete[] v.data;
+  delete[] data;
   // The below isn't necessary, but may help make certain bugs more obvious.
-  // v.data = NULL;
-  // v.n = 0;
+  // data = NULL;
+  // n = 0;
 }
 
 void vector_print(const vector& v)

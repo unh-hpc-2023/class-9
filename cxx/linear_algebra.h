@@ -11,14 +11,15 @@
 
 struct vector
 {
+  void construct(int n);
+  void destruct();
+
   double* data;
   int n;
 };
 
 #define VEC(v, i) ((v).data[i])
 
-void vector_construct(vector& v, int n);
-void vector_destruct(vector& v);
 void vector_print(const vector& v);
 bool vector_is_equal(const vector& x, const vector& y);
 

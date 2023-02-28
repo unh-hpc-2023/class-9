@@ -12,10 +12,10 @@
 void test_vector_add(int N)
 {
   vector x, y, z, z_ref;
-  vector_construct(x, N);
-  vector_construct(y, N);
-  vector_construct(z, N);
-  vector_construct(z_ref, N);
+  x.construct(N);
+  y.construct(N);
+  z.construct(N);
+  z_ref.construct(N);
 
   for (int i = 0; i < N; i++) {
     VEC(x, i) = 1 + i;
@@ -26,10 +26,10 @@ void test_vector_add(int N)
   vector_add(x, y, z);
   assert(vector_is_equal(z, z_ref));
 
-  vector_destruct(x);
-  vector_destruct(y);
-  vector_destruct(z);
-  vector_destruct(z_ref);
+  x.destruct();
+  y.destruct();
+  z.destruct();
+  z_ref.destruct();
 }
 
 int main(int argc, char** argv)

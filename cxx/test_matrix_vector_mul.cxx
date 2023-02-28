@@ -13,9 +13,9 @@ int main(int argc, char** argv)
 {
   const int N = 3;
   vector x, y, y_ref;
-  vector_construct(x, N);
-  vector_construct(y, N);
-  vector_construct(y_ref, N);
+  x.construct(N);
+  y.construct(N);
+  y_ref.construct(N);
 
   for (int i = 0; i < x.n; i++) {
     VEC(x, i) = 1 + i;
@@ -33,9 +33,9 @@ int main(int argc, char** argv)
   matrix_vector_mul(A, x, y);
   assert(vector_is_equal(y, y_ref));
 
-  vector_destruct(x);
-  vector_destruct(y);
-  vector_destruct(y_ref);
+  x.destruct();
+  y.destruct();
+  y_ref.destruct();
   matrix_destruct(A);
 
   return 0;
