@@ -12,7 +12,7 @@
 int main(int argc, char** argv)
 {
   const int N = 3;
-  struct vector x, y, y_ref;
+  vector x, y, y_ref;
   vector_construct(&x, N);
   vector_construct(&y, N);
   vector_construct(&y_ref, N);
@@ -20,7 +20,7 @@ int main(int argc, char** argv)
   for (int i = 0; i < x.n; i++) {
     VEC(&x, i) = 1 + i;
   }
-  struct matrix A;
+  matrix A;
   matrix_construct(&A, N, N);
 
   for (int i = 0; i < N; i++) {

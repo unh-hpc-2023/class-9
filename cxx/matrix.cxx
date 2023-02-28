@@ -3,21 +3,21 @@
 
 #include <stdio.h>
 
-void matrix_construct(struct matrix* A, int n_rows, int n_cols)
+void matrix_construct(matrix* A, int n_rows, int n_cols)
 {
   A->data = new double[n_rows * n_cols];
   A->n_rows = n_rows;
   A->n_cols = n_cols;
 }
 
-void matrix_destruct(struct matrix* A)
+void matrix_destruct(matrix* A)
 {
   delete[] A->data;
   // The below isn't necessary, but may help make certain bugs more obvious.
   // A->data = NULL;
 }
 
-void matrix_print(const struct matrix* A)
+void matrix_print(const matrix* A)
 {
   for (int i = 0; i < A->n_rows; i++) {
     if (i == 0) {

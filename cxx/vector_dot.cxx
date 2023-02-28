@@ -10,7 +10,7 @@
 // x: first vector
 // y: second vector
 
-double vector_dot(const struct vector* x, const struct vector* y)
+double vector_dot(const vector* x, const vector* y)
 {
   double sum = 0.f;
   assert(x->n == y->n);

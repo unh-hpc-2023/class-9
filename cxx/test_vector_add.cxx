@@ -11,7 +11,7 @@
 
 void test_vector_add(int N)
 {
-  struct vector x, y, z, z_ref;
+  vector x, y, z, z_ref;
   vector_construct(&x, N);
   vector_construct(&y, N);
   vector_construct(&z, N);
