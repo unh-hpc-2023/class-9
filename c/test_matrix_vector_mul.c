@@ -20,7 +20,8 @@ int main(int argc, char** argv)
     VEC(&x, i) = 1 + i;
   }
   struct matrix A;
-  A.data = calloc(N * N, sizeof(*A.data));
+  matrix_construct(&A, N, N);
+
   for (int i = 0; i < N; i++) {
     MAT(&A, N, i, i) = i + 1; // set diagonal
   }
@@ -31,7 +32,7 @@ int main(int argc, char** argv)
 
   vector_destruct(&x);
   vector_destruct(&y);
-  free(A.data);
+  matrix_destruct(&A);
 
   return 0;
 }
