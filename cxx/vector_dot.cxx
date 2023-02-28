@@ -10,11 +10,11 @@
 // x: first vector
 // y: second vector
 
-double vector_dot(const vector* x, const vector* y)
+double vector_dot(const vector& x, const vector& y)
 {
   double sum = 0.f;
-  assert(x->n == y->n);
-  for (int i = 0; i < x->n; i++) {
+  assert(x.n == y.n);
+  for (int i = 0; i < x.n; i++) {
     sum += VEC(x, i) * VEC(y, i);
   }
   return sum;
