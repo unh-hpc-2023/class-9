@@ -1,6 +1,6 @@
 
 add_library(linalg vector_dot.c vector_add.c matrix_vector_mul.c
-    vector.c)
+    vector.c matrix.c)
 
 add_executable(test_vector_dot test_vector_dot.c)
 target_link_libraries(test_vector_dot PRIVATE linalg)
