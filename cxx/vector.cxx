@@ -9,7 +9,7 @@ void vector::construct(int n_)
   n = n_;
 }
 
-void vector::destruct()
+vector::~vector()
 {
   delete[] data;
   // The below isn't necessary, but may help make certain bugs more obvious.

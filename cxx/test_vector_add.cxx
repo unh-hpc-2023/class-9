@@ -25,11 +25,6 @@ void test_vector_add(int N)
 
   vector_add(x, y, z);
   assert(vector_is_equal(z, z_ref));
-
-  x.destruct();
-  y.destruct();
-  z.destruct();
-  z_ref.destruct();
 }
 
 int main(int argc, char** argv)

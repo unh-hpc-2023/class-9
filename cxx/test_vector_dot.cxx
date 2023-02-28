@@ -26,8 +26,5 @@ int main(int argc, char** argv)
 
   assert(vector_dot(x, y) == 20.);
 
-  x.destruct();
-  y.destruct();
-
   return 0;
 }

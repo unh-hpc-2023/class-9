@@ -33,9 +33,6 @@ int main(int argc, char** argv)
   matrix_vector_mul(A, x, y);
   assert(vector_is_equal(y, y_ref));
 
-  x.destruct();
-  y.destruct();
-  y_ref.destruct();
   matrix_destruct(A);
 
   return 0;

@@ -12,7 +12,7 @@
 struct vector
 {
   void construct(int n);
-  void destruct();
+  ~vector();
 
   double* data;
   int n;
