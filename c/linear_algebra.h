@@ -2,6 +2,8 @@
 #ifndef LINEAR_ALGEBRA_H
 #define LINEAR_ALGEBRA_H
 
+#include <stdbool.h>
+
 // struct vector
 //
 // encapsulates what makes up a vector -- how many elements it contains (n), as
@@ -18,6 +20,7 @@ struct vector
 void vector_construct(struct vector* v, int n);
 void vector_destruct(struct vector* v);
 void vector_print(const struct vector* v);
+bool vector_is_equal(const struct vector* x, const struct vector* y);
 
 double vector_dot(const struct vector* x, const struct vector* y);
 void vector_add(const struct vector* x, const struct vector* y,
